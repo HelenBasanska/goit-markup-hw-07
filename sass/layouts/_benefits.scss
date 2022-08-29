@@ -1,0 +1,33 @@
+.benefits__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .benefits__item {
+    width: calc((100% - 3*30px) /4);
+    }
+  
+  .benefits__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin: auto;
+    background-color: var(--filter-button-color);
+    border-radius: 4px;
+  }
+  
+  .benefits__name {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .benefits__description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
