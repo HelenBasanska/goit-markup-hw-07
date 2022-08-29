@@ -14,6 +14,7 @@
   transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
+  padding: 40px;
   background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -41,15 +42,10 @@
   }
 }
 
-.modal {
-  padding: 40px;
-  
-}
-
 .modal__heading {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+
+  @include font(700, 20px, 1.15, null);
+  
   text-align: center;
   color: var(--title-text-color);
   margin-bottom: 12px;
@@ -68,10 +64,8 @@
 
 .order__label {
   color: var(--primary-text-color);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+
+  @include font(400, 12px, 1.16, 0.01em);
   margin-bottom: 4px;
 }
 
@@ -102,7 +96,6 @@
   }
 }
 
-
 .order__comment {
   padding: 12px 16px;
   margin-bottom: 0;
@@ -130,21 +123,20 @@
   }
 }
 
+
 .consent {
   margin-top: 20px;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.7;
+  @include font(null, 14px, 1.7, null);
   gap: 9px;
 }
-
 .consent__text {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.consent__checkbox {
+.checkbox {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,36 +145,33 @@
   background-color: var(--background-color);
   border-radius: 2px;
   margin-right: 7px;
-  border: 2px solid rgba(33, 33, 33, 1);
 
+  border: 2px solid rgba(33, 33, 33, 1);
   transition-property:  background-color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  .input__check:checked + & {
+  .input__check:checked + .consent__text & {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
   }
-  
-  .input__check:focus + & {
-      border-color: var(--accent-color);
-  }
 
+  .input__check:focus + .consent__text & {
+    border-color: var(--accent-color);
+  }
 }
 
 .checkbox__icon {
   fill: transparent;
-
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  .input__check:checked + & {
+  .input__check:checked + .consent__text & {
     fill: var(--background-color);
     border: none;
   }
 }
-
 
 .consent__link {
   color: var(--accent-color);

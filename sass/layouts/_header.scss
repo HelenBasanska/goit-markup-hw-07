@@ -41,10 +41,9 @@
     padding-bottom: 32px;
   
     color: var(--title-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-  
+    
+    @include font(500, 14px, null, 0.02em);
+      
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,10 +89,9 @@
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-  
+    
+    @include font(500, 14px, null, 0.02em);
+    
     align-items: center;
     justify-content: center;
     align-self: center;

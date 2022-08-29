@@ -35,8 +35,6 @@
   left: 107px;
   
   color: var(--background-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(700, 14px, 1.14, null);
   text-transform: uppercase;
 }

@@ -20,14 +20,14 @@
   
   .benefits__name {
     color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 14px;
+    
+    @include font(700, 14px, null, null);
+    
     text-transform: uppercase;
     margin-top: 30px;
     margin-bottom: 10px;
   }
   
   .benefits__description {
-    font-size: 14px;
-    line-height: 1.7;
+    @include font(null, 14px, 1.7, null);
   }
